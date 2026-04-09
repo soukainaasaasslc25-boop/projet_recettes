@@ -3,7 +3,7 @@ require_once 'db.php';
 require_once 'functions.php';
 
 $message = "";
-$messageType = "";
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name     = trim($_POST['name']);
@@ -16,11 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             $message = "Erreur lors de l'ajout du produit.";
-            $messageType = "error";
+           
         }
     } else {
         $message = "Veuillez remplir tous les champs correctement.";
-        $messageType = "error";
+      
     }
 }
 ?>

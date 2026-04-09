@@ -10,7 +10,7 @@ if (!$produit) {
 }
 
 $message = "";
-$messageType = "";
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name     = trim($_POST['name']);
@@ -23,11 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             $message = "Erreur lors de la modification.";
-            $messageType = "error";
+           
         }
     } else {
         $message = "Veuillez remplir correctement les champs.";
-        $messageType = "error";
+        
     }
 }
 ?>
