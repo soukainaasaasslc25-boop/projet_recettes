@@ -83,12 +83,12 @@ h1::after {
     border-radius: 3px;
 }
 
-
 .subhead {
     color: var(--gray-600);
     margin-bottom: 32px;
     font-size: 0.95rem;
 }
+
 
 .btn {
     display: inline-flex;
@@ -105,7 +105,6 @@ h1::after {
     cursor: pointer;
     border: none;
 }
-
 
 .btn-add {
     background: var(--primary);
@@ -126,7 +125,6 @@ h1::after {
     font-weight: 400;
 }
 
-
 .btn-edit {
     background: var(--gold);
     color: #2C2C2C;
@@ -138,7 +136,6 @@ h1::after {
     transform: translateY(-2px);
     box-shadow: var(--shadow-gold);
 }
-
 
 .btn-delete {
     background: transparent;
@@ -206,7 +203,6 @@ td img:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-
 td span[style] {
     font-size: 0.75rem;
     background: var(--gray-100);
@@ -215,11 +211,9 @@ td span[style] {
     display: inline-block;
 }
 
-
 td:last-child {
     white-space: nowrap;
 }
-
 
 .category-badge {
     display: inline-block;
@@ -230,7 +224,6 @@ td:last-child {
     font-weight: 500;
     color: var(--gray-700);
 }
-
 
 .empty-state {
     text-align: center;
@@ -246,9 +239,86 @@ td:last-child {
 }
 
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container, table, .btn {
+    animation: fadeIn 0.35s ease-out;
+}
+
+.recipe-count {
+    font-size: 0.8rem;
+    color: var(--gold-dark);
+    margin-left: 12px;
+    font-weight: 500;
+}
+
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+        padding: 60px 50px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    td img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+        padding: 40px 32px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .container {
+        width: 92%;
+        padding: 36px 28px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    th, td {
+        padding: 14px 12px;
+    }
+    
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
+
 @media (max-width: 768px) {
     .container {
-        padding: 28px 20px;
+        padding: 28px 24px;
         width: 95%;
     }
     
@@ -256,9 +326,23 @@ td:last-child {
         font-size: 1.8rem;
     }
     
+    h1::after {
+        width: 50px;
+    }
+    
+    .container::before {
+        top: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+    
     th, td {
         padding: 12px 10px;
         font-size: 0.8rem;
+    }
+    
+    th {
+        font-size: 0.7rem;
     }
     
     td img {
@@ -279,29 +363,230 @@ td:last-child {
         display: flex;
         flex-wrap: wrap;
         gap: 6px;
+        white-space: normal;
+    }
+    
+    .subhead {
+        font-size: 0.85rem;
     }
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+@media (max-width: 576px) {
+    .container {
+        padding: 20px 16px;
+        width: 98%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    h1 {
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+    
+    h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+    }
+    
+    .container::before {
+        display: none;
+    }
+    
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.7rem;
+    }
+    
+    th {
+        font-size: 0.65rem;
+    }
+    
+    td img {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+        gap: 4px;
+    }
+    
+    .btn-add::before {
+        font-size: 1rem;
+    }
+    
+    .btn-edit, .btn-delete {
+        margin: 2px;
+    }
+    
+    td:last-child {
+        gap: 4px;
+    }
+    
+    .table-wrapper {
+        margin: 20px 0 10px;
+    }
+    
+    .empty-state {
+        padding: 40px 16px;
+    }
+    
+    .empty-state p {
+        font-size: 0.85rem;
+    }
+    
+    .recipe-count {
+        font-size: 0.7rem;
+        margin-left: 8px;
     }
 }
 
-.container, table, .btn {
-    animation: fadeIn 0.35s ease-out;
+
+@media (max-width: 400px) {
+    .container {
+        padding: 16px 12px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    th, td {
+        padding: 8px 6px;
+        font-size: 0.65rem;
+    }
+    
+    th {
+        font-size: 0.6rem;
+        letter-spacing: 0.3px;
+    }
+    
+    td img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+    }
+    
+    .btn-edit, .btn-delete {
+        font-size: 0.6rem;
+    }
+    
+    td span[style] {
+        font-size: 0.6rem;
+        padding: 3px 8px;
+    }
+    
+    .category-badge {
+        font-size: 0.6rem;
+        padding: 2px 8px;
+    }
 }
 
 
-.recipe-count {
-    font-size: 0.8rem;
-    color: var(--gold-dark);
-    margin-left: 12px;
-    font-weight: 500;
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 20px 24px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    .btn {
+        padding: 5px 12px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .container {
+        padding: 32px 28px;
+    }
+    
+    td img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+        padding: 70px 60px;
+    }
+    
+    body {
+        font-size: 17px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    td img {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    td img {
+        image-rendering: crisp-edges;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .container, table, .btn, tr td, td img {
+        animation: none;
+        transition: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    td img:hover {
+        transform: none;
+    }
+}
+
+
+@media print {
+    body {
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    tr:hover td {
+        background: none;
+    }
+    
+    .table-wrapper {
+        overflow: visible;
+    }
 }
