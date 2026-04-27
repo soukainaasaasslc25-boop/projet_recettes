@@ -1,8 +1,8 @@
 :root {
-    --primary: #2C6E2F;       /* Vert frais FRESHFLAVORS */
+    --primary: #2C6E2F;      
     --primary-dark: #1E4A20;
     --primary-light: #4A8A4D;
-    --gold: #D4AF37;          /* Or élégant */
+    --gold: #D4AF37;         
     --gold-light: #E8C84A;
     --gold-dark: #B8960F;
     --gray-50: #FDFDFD;
@@ -40,7 +40,7 @@ body {
     padding: 40px 0;
 }
 
-/* Conteneur principal */
+
 .container {
     max-width: 800px;
     width: 90%;
@@ -52,7 +52,7 @@ body {
     position: relative;
 }
 
-/* Décoration subtile */
+
 .container::before {
     content: '✦';
     position: absolute;
@@ -64,7 +64,7 @@ body {
     font-family: monospace;
 }
 
-/* Titre principal */
+
 h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -86,7 +86,6 @@ h1::after {
     border-radius: 3px;
 }
 
-/* Message d'erreur */
 .message-error {
     background: #FEF3F2;
     border-left: 4px solid #E53935;
@@ -124,7 +123,7 @@ h1::after {
     font-weight: bold;
 }
 
-/* Formulaire */
+
 form {
     display: flex;
     flex-direction: column;
@@ -132,7 +131,7 @@ form {
     margin: 32px 0 24px;
 }
 
-/* Labels */
+
 form label {
     font-weight: 600;
     color: var(--primary);
@@ -142,7 +141,8 @@ form label {
     margin-bottom: -12px;
 }
 
-/* Inputs, selects */
+
+
 form input,
 form select {
     padding: 14px 16px;
@@ -162,7 +162,7 @@ form select:focus {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
-/* Input file */
+
 form input[type="file"] {
     padding: 10px;
     background: var(--gray-100);
@@ -175,7 +175,7 @@ form input[type="file"]:hover {
     background: #FEFAF0;
 }
 
-/* Bouton submit (vert) */
+
 button[type="submit"] {
     background: var(--primary);
     color: white;
@@ -206,7 +206,7 @@ button[type="submit"]::before {
     font-size: 1rem;
 }
 
-/* Lien retour */
+
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -228,21 +228,21 @@ button[type="submit"]::before {
     font-size: 1rem;
 }
 
-/* Aide / info */
+
 .help-text {
     font-size: 0.7rem;
     color: var(--text-muted);
     margin-top: -8px;
 }
 
-/* Groupe de champs */
+
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     body {
         padding: 20px 0;
@@ -269,7 +269,7 @@ button[type="submit"]::before {
     }
 }
 
-/* Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -285,7 +285,7 @@ button[type="submit"]::before {
     animation: fadeIn 0.35s ease-out;
 }
 
-/* Badge optionnel */
+
 .badge-gold {
     display: inline-block;
     background: var(--gold-light);

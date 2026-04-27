@@ -1,8 +1,7 @@
 :root {
-    --primary: #2C6E2F;       /* Vert frais FRESHFLAVORS */
     --primary-dark: #1E4A20;
     --primary-light: #4A8A4D;
-    --gold: #D4AF37;          /* Or élégant */
+    --gold: #D4AF37;         
     --gold-light: #E8C84A;
     --gold-dark: #B8960F;
     --gray-50: #FDFDFD;
@@ -40,7 +39,7 @@ body {
     padding: 40px 0;
 }
 
-/* Conteneur principal */
+
 .container {
     max-width: 800px;
     width: 90%;
@@ -52,7 +51,7 @@ body {
     position: relative;
 }
 
-/* Décoration subtile */
+
 .container::before {
     content: '✦';
     position: absolute;
@@ -64,7 +63,7 @@ body {
     font-family: monospace;
 }
 
-/* Titre principal */
+
 h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -86,7 +85,6 @@ h1::after {
     border-radius: 3px;
 }
 
-/* Message d'erreur */
 .message-error {
     background: #FEF3F2;
     border-left: 4px solid #E53935;
@@ -105,7 +103,7 @@ h1::after {
     font-size: 1rem;
 }
 
-/* Formulaire */
+
 form {
     display: flex;
     flex-direction: column;
@@ -113,7 +111,7 @@ form {
     margin: 32px 0 24px;
 }
 
-/* Labels */
+
 form label {
     font-weight: 600;
     color: var(--primary);
@@ -123,7 +121,7 @@ form label {
     margin-bottom: -12px;
 }
 
-/* Inputs, selects */
+
 form input,
 form select {
     padding: 14px 16px;
@@ -143,7 +141,7 @@ form select:focus {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
-/* Input file */
+
 form input[type="file"] {
     padding: 10px;
     background: var(--gray-100);
@@ -155,7 +153,7 @@ form input[type="file"]:hover {
     background: #FEFAF0;
 }
 
-/* Image actuelle */
+
 .current-image {
     margin: 8px 0;
 }
@@ -174,7 +172,7 @@ form input[type="file"]:hover {
     margin-top: 8px;
 }
 
-/* Boutons (vert + or) */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -204,7 +202,7 @@ form input[type="file"]:hover {
     box-shadow: 0 6px 14px rgba(44, 110, 47, 0.2);
 }
 
-/* Lien retour */
+
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -226,14 +224,14 @@ form input[type="file"]:hover {
     font-size: 1rem;
 }
 
-/* Espacement entre champs */
+
 form > div {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-/* Groupe de boutons */
+
 .form-actions {
     display: flex;
     gap: 16px;
@@ -241,7 +239,7 @@ form > div {
     margin-top: 8px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     body {
         padding: 20px 0;
